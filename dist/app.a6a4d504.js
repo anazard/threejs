@@ -37083,10 +37083,9 @@ function animate() {
 }
 
 window.addEventListener('resize', function () {
-  var newAspect = container.clientWidth / container.clientHeight;
-  camera.aspect = newAspect;
-  renderer.setSize(newAspect);
+  camera.aspect = container.clientWidth / container.clientHeight;
   camera.updateProjectionMatrix();
+  renderer.setSize(container.clientWidth, container.clientHeight);
 });
 },{"three":"node_modules/three/build/three.module.js","three-gltf-loader":"node_modules/three-gltf-loader/index.js","./assets/palm.glb":"src/assets/palm.glb"}],"node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -37116,7 +37115,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58627" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59152" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

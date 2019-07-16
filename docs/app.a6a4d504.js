@@ -37064,7 +37064,7 @@ var goingForward = true;
 })();
 
 var zStep = .0001;
-var yStep = .0003;
+var yStep = .0001;
 
 function animate() {
   requestAnimationFrame(animate); // Animation
@@ -37086,6 +37086,12 @@ window.addEventListener('resize', function () {
   camera.aspect = container.clientWidth / container.clientHeight;
   camera.updateProjectionMatrix();
   renderer.setSize(container.clientWidth, container.clientHeight);
+});
+var canvas = document.querySelector('canvas');
+canvas.addEventListener('mousemove', function (e) {
+  var clientX = e.clientX,
+      clientY = e.clientY;
+  camera.position.set(clientX * .00001, 6 + clientY * .00005, 10);
 });
 },{"three":"node_modules/three/build/three.module.js","three-gltf-loader":"node_modules/three-gltf-loader/index.js","./assets/palm.glb":"src/assets/palm.glb"}],"node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -37115,7 +37121,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59757" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50379" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

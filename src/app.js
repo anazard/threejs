@@ -56,7 +56,7 @@ let goingForward = true;
 })();
 
 const zStep = .0001;
-const yStep = .0003;
+const yStep = .0001;
 function animate() {
     requestAnimationFrame(animate);
 
@@ -78,4 +78,11 @@ window.addEventListener('resize', () => {
     camera.updateProjectionMatrix();
 
     renderer.setSize(container.clientWidth, container.clientHeight);
-})
+});
+
+let canvas = document.querySelector('canvas');
+canvas.addEventListener('mousemove', (e) => {
+    const {clientX, clientY} = e;
+
+    camera.position.set(clientX * .00001, 6 + (clientY * .00005), 10);
+});

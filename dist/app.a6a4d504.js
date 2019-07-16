@@ -37087,8 +37087,7 @@ window.addEventListener('resize', function () {
   camera.updateProjectionMatrix();
   renderer.setSize(container.clientWidth, container.clientHeight);
 });
-var canvas = document.querySelector('canvas');
-canvas.addEventListener('mousemove', function (e) {
+container.addEventListener('mousemove', function (e) {
   var clientX = e.clientX,
       clientY = e.clientY;
   camera.position.set(clientX * .00001, 6 + clientY * .00005, 10);

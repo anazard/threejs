@@ -80,8 +80,7 @@ window.addEventListener('resize', () => {
     renderer.setSize(container.clientWidth, container.clientHeight);
 });
 
-let canvas = document.querySelector('canvas');
-canvas.addEventListener('mousemove', (e) => {
+container.addEventListener('mousemove', (e) => {
     const {clientX, clientY} = e;
 
     camera.position.set(clientX * .00001, 6 + (clientY * .00005), 10);

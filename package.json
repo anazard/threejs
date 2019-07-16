@@ -6,13 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "./node_modules/parcel/bin/cli.js index.html -p 666"
- },
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "parcel": "^1.12.3"
   },
   "dependencies": {
-    "three": "^0.106.2"
+    "three": "^0.106.2",
+    "three-gltf-loader": "^1.106.0"
   }
 }

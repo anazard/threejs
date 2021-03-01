@@ -14,7 +14,7 @@
     "parcel": "^1.12.3"
   },
   "dependencies": {
-    "three": "^0.106.2",
+    "three": "^0.125.0",
     "three-gltf-loader": "^1.106.0"
   }
 }
